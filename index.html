@@ -358,7 +358,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 .hudc::after{right:0;bottom:0;border-left:0;border-top:0}
 .tilt{transform-style:preserve-3d;transition:transform .25s ease}
 
-/* rotating neon border */
+/* rotating border */
 .neon{position:relative;isolation:isolate}
 .neon::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;z-index:-1;
   background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--orange) 80%,#c9caff 85%,var(--red) 90%,transparent 100%);
@@ -599,13 +599,50 @@ footer .leave a{color:var(--text);text-decoration:underline;text-underline-offse
 .bub.l{background:#fff;color:#0b0b1f}
 .bub.r{background:linear-gradient(135deg,#4b4de0,#2f309c)}
 .bars i{background:rgba(255,255,255,.25)}.bars i:last-child{background:linear-gradient(180deg,#c9caff,#4b4de0)}
+
+/* ===== PROFESSIONAL PASS ===== */
+.hudc,#cur,#dot,#net,.core{display:none!important}
+.rv{filter:none;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.mono,.label,.chips span,.plan .tl,.result .bar,.grid4 .label,.step .sn,.pf-tag{font-family:"Geist",system-ui,sans-serif}
+.label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.02em;text-transform:none;padding:6px 14px;border:1px solid rgba(47,48,156,.18);border-left:1px solid rgba(47,48,156,.18);border-radius:99px;background:rgba(47,48,156,.06);color:#2f309c}
+.label::before{content:"";width:6px;height:6px;border-radius:50%;background:#2f309c}
+.gs .label{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1)}
+.gs .label::before{background:#fff}
+.about p{text-transform:none;font-size:clamp(22px,2.4vw,32px);line-height:1.35;letter-spacing:-.02em}
+.words .w{opacity:.25}
+.plan ul{text-transform:none;font-size:15px;color:#3d3f55}
+.chips span{border-radius:99px;padding:6px 12px;font-size:13px;background:#f1f2fa;border-color:transparent}
+.btn-dark::after{display:none}
+.btn{border-radius:10px;font-weight:500}
+.btn-fire,.btn-white{box-shadow:0 6px 18px rgba(47,48,156,.25)}
+h1,h2{font-weight:600;letter-spacing:-.04em}
+.svc h3{font-weight:600}
+.step .sn{font-weight:600}
+.tbl li::before{color:#2f309c;font-weight:700}.tbl li.x::before{color:#b3b5c6}
+/* hero product preview */
+.mock{width:min(100%,420px);background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 80px rgba(47,48,156,.18),0 2px 6px rgba(20,22,60,.05);overflow:hidden;animation:chin 1s .3s both}
+.mock-top{display:flex;gap:12px;align-items:center;padding:16px 18px;background:var(--ai);color:#fff}
+.mock-top img{width:38px;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,.25)}
+.mock-top b{display:block;font-weight:500;font-size:15px}.mock-top span{font-size:12px;opacity:.75}
+.mock-body{display:flex;flex-direction:column;gap:10px;padding:20px 18px;background:#f6f7fc}
+.m{max-width:82%;padding:10px 14px;border-radius:14px;font-size:14px;line-height:1.4;opacity:0;animation:pop .5s forwards}
+.m.l{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+.m.r{align-self:flex-end;background:#2f309c;color:#fff;border-bottom-right-radius:4px}
+.m:nth-child(1){animation-delay:.8s}.m:nth-child(2){animation-delay:1.6s}.m:nth-child(3){animation-delay:2.4s}.m:nth-child(4){animation-delay:3.2s}
+.mock-foot{display:flex;gap:8px;flex-wrap:wrap;padding:14px 18px;border-top:1px solid var(--line)}
+.mock-foot span{font-size:12px;padding:5px 10px;border-radius:99px;background:rgba(47,48,156,.07);color:#2f309c}
+.mock-foot span::before{content:"✓ "}
+.hero-side{gap:20px}
+.talk{animation-delay:.5s}
+@media(max-width:900px){.hero-side{order:0}.mock{width:100%}}
+.vis .panel .bub.l{color:#0b0b1f}
+.hero{min-height:auto;padding:150px 0 90px}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><filter id="roughen"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="g"/><feComposite in="SourceGraphic" in2="g" operator="arithmetic" k1=".25" k2="1" k3="-.08" k4="0"/></filter></svg>
 
-<div id="boot"><div class="pct mono" id="bpct">0%</div><div class="track"><i id="bbar"></i></div><div class="lines" id="blines"></div></div>
-<div id="prog"></div><div id="cur"></div><div id="dot"></div>
+<div id="prog"></div>
 
 <nav><div class="wrap">
   <a href="#" class="logo"><img src="images/kola-logo-128.png" alt="" width="36" height="36">kola<span>.</span>ai</a>
@@ -633,8 +670,17 @@ footer .leave a{color:var(--text);text-decoration:underline;text-underline-offse
       <ul class="trust"><li>One time price</li><li>Live in 30 days</li><li>30 days of support</li></ul>
     </div>
     <div class="hero-side">
-      <div class="core" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="ball"></div><div class="visor"><i></i><i></i></div></div>
-      <div class="talk neon">
+      <div class="mock" aria-hidden="true">
+        <div class="mock-top"><img src="images/kola-logo-128.png" alt=""><div><b>Kola Lead Assistant</b><span>WhatsApp Business · online</span></div></div>
+        <div class="mock-body">
+          <div class="m l">Hi, I saw your 2BHK listing in Kandivali</div>
+          <div class="m r">Hi! Thanks for reaching out. What's your budget range?</div>
+          <div class="m l">Around ₹1.2 Cr</div>
+          <div class="m r">Great, we have 3 options. Site visit on Saturday, 11am or 4pm?</div>
+        </div>
+        <div class="mock-foot"><span>Lead qualified</span><span>Visit booked</span><span>CRM updated</span></div>
+      </div>
+      <div class="talk">
         <div class="pic">K</div>
         <div><h3>Talk with Kola</h3><small>Automation team · Mumbai</small><a class="btn btn-white" data-wa="a 15 min call" href="#">Book 15 min Call ↗</a></div>
       </div>
@@ -747,7 +793,7 @@ footer .leave a{color:var(--text);text-decoration:underline;text-underline-offse
         <div class="field"><label>Monthly salary <output id="o-sal">₹25,000</output></label><input type="range" id="sal" min="10000" max="150000" step="5000" value="25000"></div>
         <div class="field"><label>Share we automate <output id="o-auto">70%</output></label><input type="range" id="auto" min="30" max="90" step="5" value="70"></div>
       </div>
-      <div class="result neon rv d1">
+      <div class="result rv d1">
         <div class="grain"></div>
         <div style="position:relative"><h3>You could save every year</h3><div class="num" id="save">₹0</div></div>
         <div style="position:relative">
@@ -767,7 +813,7 @@ footer .leave a{color:var(--text);text-decoration:underline;text-underline-offse
     <div class="vs">
       <div class="tbl rv"><h3>Kola AI</h3><ul><li>Price published upfront</li><li>Process mapping first</li><li>Weeks, not months</li><li>One time cost, you own it</li><li>Backed by the full Kola team</li></ul></div>
       <div class="circles rv d1"><span>Kola<br>AI</span><span>IT<br>Company</span></div>
-      <div class="tbl them rv d2"><h3>Typical IT Company</h3><ul><li class="x">"Contact us for pricing"</li><li class="x">Tool first approach</li><li class="x">Most often delayed</li><li class="x">Ongoing licence fees</li><li>Scope creep common</li></ul></div>
+      <div class="tbl them rv d2"><h3>Typical IT Company</h3><ul><li class="x">"Contact us for pricing"</li><li class="x">Tool first approach</li><li class="x">Most often delayed</li><li class="x">Ongoing licence fees</li><li class="x">Scope creep common</li></ul></div>
     </div>
   </div>
 </section>
@@ -783,11 +829,11 @@ footer .leave a{color:var(--text);text-decoration:underline;text-underline-offse
     </div>
     <div class="plans">
       <div class="plan rv"><div class="top"><h3>Starter</h3><p class="sub">One task, automated end to end</p><div class="amt">₹XX,XXX <small>one time</small></div></div>
-        <div class="bot"><h4>Whats included:</h4><ul><li>1 automation flow</li><li>Up to 2 integrations</li><li>WhatsApp or web</li><li>15 day support</li></ul><a class="btn btn-dark" data-wa="Starter package" href="#">Start Project ↗</a><p class="tl">Timeline <b>1 to 2 weeks</b></p></div></div>
-      <div class="plan pop neon rv"><div class="top"><h3>Growth <span class="tagp">Popular</span></h3><p class="sub">For teams that want a real system</p><div class="amt">₹XX,XXX <small>one time</small></div></div>
-        <div class="bot"><h4>Whats included:</h4><ul><li>Up to 3 automation flows</li><li>AI chat agent</li><li>CRM + dashboard</li><li>Knowledge base training</li><li>30 day support</li></ul><a class="btn btn-dark" data-wa="Growth package" href="#">Start Project ↗</a><p class="tl">Timeline <b>2 to 4 weeks</b></p></div></div>
+        <div class="bot"><h4>What's included</h4><ul><li>1 automation flow</li><li>Up to 2 integrations</li><li>WhatsApp or web</li><li>15 day support</li></ul><a class="btn btn-dark" data-wa="Starter package" href="#">Start Project ↗</a><p class="tl">Timeline <b>1 to 2 weeks</b></p></div></div>
+      <div class="plan pop rv"><div class="top"><h3>Growth <span class="tagp">Popular</span></h3><p class="sub">For teams that want a real system</p><div class="amt">₹XX,XXX <small>one time</small></div></div>
+        <div class="bot"><h4>What's included</h4><ul><li>Up to 3 automation flows</li><li>AI chat agent</li><li>CRM + dashboard</li><li>Knowledge base training</li><li>30 day support</li></ul><a class="btn btn-dark" data-wa="Growth package" href="#">Start Project ↗</a><p class="tl">Timeline <b>2 to 4 weeks</b></p></div></div>
       <div class="plan rv"><div class="top"><h3>Custom</h3><p class="sub">Apps, attendance systems, larger builds</p><div class="amt">₹X,XX,XXX+ <small>scoped</small></div></div>
-        <div class="bot"><h4>Whats included:</h4><ul><li>Unlimited workflows</li><li>Custom app / portal</li><li>Full audit + 90 day plan</li><li>Dedicated success manager</li></ul><a class="btn btn-dark" data-wa="Custom package" href="#">Start Project ↗</a><p class="tl">Timeline <b>4 to 8 weeks</b></p></div></div>
+        <div class="bot"><h4>What's included</h4><ul><li>Unlimited workflows</li><li>Custom app / portal</li><li>Full audit + 90 day plan</li><li>Dedicated success manager</li></ul><a class="btn btn-dark" data-wa="Custom package" href="#">Start Project ↗</a><p class="tl">Timeline <b>4 to 8 weeks</b></p></div></div>
     </div>
   </div>
 </section>
@@ -914,7 +960,7 @@ const wm = document.querySelector('.wordmark'), core = document.querySelector('.
 addEventListener('scroll', () => {
   const y = scrollY; if (y > innerHeight) return;
   wm.style.transform = 'translateY(' + y * .35 + 'px)';
-  core.style.transform = 'translateY(' + y * .1 + 'px)';
+  if (core) core.style.transform = 'translateY(' + y * .1 + 'px)';
 }, { passive: true });
 
 // Hours-saved calculator
@@ -938,32 +984,8 @@ calc();
 /* ===== FUTURISTIC LAYER ===== */
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Boot sequence loader
-(() => {
-  const boot = $('boot'); if (reduce) { boot.remove(); return; }
-  document.body.classList.add('booting');
-  const msgs = ['init neural_core ......... <b>ok</b>', 'load whatsapp_api ........ <b>ok</b>', 'connect crm_bridge ....... <b>ok</b>', 'train agent on kola_kb ... <b>ok</b>', 'launch kola.ai ........... <b>ready</b>'];
-  let p = 0, m = 0;
-  const t = setInterval(() => {
-    p = Math.min(100, p + 4 + Math.random() * 9);
-    $('bpct').textContent = Math.floor(p) + '%'; $('bbar').style.width = p + '%';
-    if (p > (m + 1) * 19 && m < msgs.length) $('blines').insertAdjacentHTML('beforeend', '<div>&gt; ' + msgs[m++] + '</div>');
-    if (p >= 100) { clearInterval(t); setTimeout(() => { boot.classList.add('done'); document.body.classList.remove('booting'); }, 350); }
-  }, 70);
-})();
-
 // Scroll progress
 addEventListener('scroll', () => { $('prog').style.transform = 'scaleX(' + scrollY / (document.body.scrollHeight - innerHeight) + ')'; }, { passive: true });
-
-// Cursor glow + dot that grows over interactive elements
-const cur = $('cur'), dot = $('dot');
-let mx = innerWidth / 2, my = innerHeight / 2, cx = mx, cy = my;
-addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; });
-document.querySelectorAll('a,button,summary,input').forEach(el => {
-  el.addEventListener('mouseenter', () => dot.classList.add('hov'));
-  el.addEventListener('mouseleave', () => dot.classList.remove('hov'));
-});
-(function follow() { cx += (mx - cx) * .08; cy += (my - cy) * .08; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(follow); })();
 
 // Neural network particle field in the hero; nodes link up and pull toward the cursor
 (() => {
@@ -1034,25 +1056,10 @@ if (!reduce) {
 
 // Card spotlight follows the mouse, plus HUD corner brackets and 3D tilt
 document.querySelectorAll('.svc,.plan,.bx,.logo-tile,.grid4 .cell').forEach(el => {
-  el.insertAdjacentHTML('beforeend', '<i class="hudc"></i>');
   el.addEventListener('mousemove', e => {
     const r = el.getBoundingClientRect();
     el.style.setProperty('--mx', e.clientX - r.left + 'px'); el.style.setProperty('--my', e.clientY - r.top + 'px');
   });
-});
-document.querySelectorAll('.logo-tile,.plan,.bx').forEach(el => {
-  el.classList.add('tilt');
-  el.addEventListener('mousemove', e => {
-    const r = el.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
-    el.style.transform = `perspective(900px) rotateY(${px * 8}deg) rotateX(${-py * 8}deg)`;
-  });
-  el.addEventListener('mouseleave', () => el.style.transform = '');
-});
-
-// Magnetic buttons
-document.querySelectorAll('.btn').forEach(b => {
-  b.addEventListener('mousemove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .2}px,${(e.clientY - r.top - r.height / 2) * .3}px)`; });
-  b.addEventListener('mouseleave', () => b.style.transform = '');
 });
 </script>
 </body>
