@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kola AI — AI Automation for Indian Businesses</title>
-<meta name="description" content="Kola AI builds WhatsApp bots, lead follow-up, quotation and attendance automations for SMEs, real estate and finance teams. Cut manual work in 30 days, at a one-time price. A Kola Communications company.">
+<title>Kola AI | AI Automation for Indian Businesses</title>
+<meta name="description" content="Kola AI builds WhatsApp bots, lead follow up, quotation and attendance automations for SMEs, real estate and finance teams. Cut manual work in 30 days, at a one time price. A Kola Communications company.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -436,6 +436,111 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 .logo-tile img{max-width:62%;max-height:46px;object-fit:contain;filter:grayscale(1) brightness(1.6);opacity:.7;transition:filter .3s,opacity .3s}
 .logo-tile:hover img{filter:none;opacity:1}
 @media(max-width:900px){.logo-tile{height:76px;font-size:16px}.logo-tile img{max-height:34px}}
+
+/* ===== LIGHT THEME: soft AI pastels (peach, lavender, sky) ===== */
+:root{--bg:#fbf8f6;--card:#fff;--card2:#f7f3f0;--line:rgba(24,20,40,.09);--text:#15131c;--muted:#5d5b68;--dim:#9a98a6;--violet:#8b5cf6;--sky:#3ba7ff;
+  --ai:linear-gradient(120deg,#fe4006,#ff4d8d 45%,#8b5cf6);--shadow:0 1px 2px rgba(24,20,40,.04),0 12px 32px rgba(24,20,40,.06)}
+body{background:radial-gradient(1200px 600px at 100% 0,#efe9ff,transparent 60%),radial-gradient(900px 500px at 0 30%,#ffece3,transparent 60%),var(--bg) fixed}
+.grain,.scan,.floor,#cur{display:none}
+.label{background:linear-gradient(90deg,rgba(254,64,6,.12),rgba(139,92,246,.06));color:#3a2f4a;border-left-color:var(--orange)}
+.btn-fire{background:var(--ai);box-shadow:0 6px 20px rgba(254,64,6,.25)}
+.btn-fire:hover{box-shadow:0 12px 34px rgba(139,92,246,.35)}
+.btn-dark{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:var(--shadow)}
+.btn-dark:hover{background:#f6f2ff}
+.btn-white{background:var(--text);color:#fff}
+nav{background:rgba(251,248,246,.75);border-bottom-color:var(--line)}
+/* hero */
+.hero .glow{opacity:1;background:radial-gradient(ellipse 40% 50% at 15% 30%,rgba(255,140,100,.35),transparent 70%),radial-gradient(ellipse 40% 55% at 80% 40%,rgba(139,92,246,.28),transparent 70%),radial-gradient(ellipse 50% 40% at 60% 100%,rgba(59,167,255,.18),transparent 70%)}
+.hero .fade{background:linear-gradient(transparent,var(--bg))}
+#net{opacity:.6}
+.hero h1{text-shadow:none;background:linear-gradient(180deg,#15131c 40%,#3b2b5c);-webkit-background-clip:text;background-clip:text}
+.hero h1 .ch{color:#15131c}
+.hero .sub{color:var(--muted)}
+.eyebrow{background:#fff;color:var(--text);box-shadow:var(--shadow)}
+.trust{color:var(--muted)}
+.trust li::before{background:rgba(139,92,246,.14);color:var(--violet)}
+.core .ring{border-color:rgba(139,92,246,.25)}
+.core .ring:nth-child(2){border-color:rgba(254,64,6,.3)}
+.core .ball{background:radial-gradient(circle at 35% 30%,#fff3ec,#ffb38f 25%,#ff6a6a 50%,#8b5cf6 85%);box-shadow:0 30px 90px rgba(139,92,246,.35),0 0 80px rgba(254,120,80,.3),inset -20px -30px 60px rgba(60,20,120,.25)}
+.core .visor{background:#1b1726;border-color:#fff;box-shadow:0 10px 30px rgba(60,20,120,.25)}
+.talk{background:rgba(255,255,255,.8);box-shadow:var(--shadow)}
+.talk .pic{background:linear-gradient(135deg,#ffb38f,#ff6a8d 50%,#8b5cf6);color:#fff}
+/* about + clients */
+.words .w{opacity:.2}
+.logos::before{background:radial-gradient(circle,rgba(139,92,246,.25),transparent 70%)}
+.logo-tile{background:#fff;color:#7b7987;box-shadow:var(--shadow)}
+.logo-tile:hover{color:var(--text);background:#fff;border-color:rgba(139,92,246,.4)}
+.logo-tile img{filter:grayscale(1);opacity:.6}
+/* process */
+.step{background:#fff;box-shadow:var(--shadow)}
+.step .sn{background:#fff;color:var(--text);border-color:rgba(139,92,246,.5);box-shadow:0 0 0 6px var(--bg),0 6px 20px rgba(139,92,246,.25)}
+.step .when{color:var(--violet)}
+.step ul{color:var(--muted)}
+.steps::before{background:linear-gradient(90deg,var(--orange),#ff4d8d,var(--violet))}
+/* use cases */
+.svc{background:#fff;box-shadow:var(--shadow)}
+.svc .vis,.svc:nth-of-type(n) .vis{background-image:none;background:linear-gradient(135deg,#ffe3d6,#ffd6e6 45%,#e4dcff)}
+.svc.flip .vis,.svc.flip:nth-of-type(n) .vis{background:linear-gradient(135deg,#dff0ff,#e9e2ff 50%,#ffe6dc)}
+.svc .price b{color:var(--text)}
+.chips span{background:#f7f3f0;color:#3d3a48}
+.vis .panel{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.9);box-shadow:0 20px 50px rgba(60,20,120,.12)}
+.bub.l{background:#f1eef6;color:var(--text)}
+.bub.r{background:var(--ai);color:#fff}
+.ai-chip{background:var(--ai);color:#fff;border:0;box-shadow:0 10px 30px rgba(139,92,246,.35)}
+.flow svg path{stroke:rgba(139,92,246,.6)}
+.flow .outs div{background:#fff;border-color:var(--line);color:var(--text)}
+.bars i{background:rgba(139,92,246,.3)}.bars i:last-child{background:var(--ai)}
+.pill{background:#fff;color:var(--text);box-shadow:var(--shadow)}
+.map i{background:#fff;border-color:var(--line)}
+.map i.on{background:rgba(254,64,6,.12)}
+/* integrations */
+.icons::before{background:radial-gradient(circle,rgba(139,92,246,.3),transparent 65%)}
+.irow div{background:#fff;border-color:var(--line);color:var(--muted);box-shadow:var(--shadow)}
+.irow img{filter:none;opacity:.85}
+.irow .wm{color:var(--text)}
+/* calculator */
+.field{border-left-color:rgba(24,20,40,.12)}
+.field:focus-within,.field:hover{border-left-color:var(--violet)}
+input[type=range]{background:#e6e1ee}
+input[type=range]::-webkit-slider-thumb{background:#fff;box-shadow:0 0 0 1px rgba(24,20,40,.15),0 0 0 6px rgba(139,92,246,.25)}
+input[type=range]::-moz-range-thumb{background:#fff;box-shadow:0 0 0 6px rgba(139,92,246,.25)}
+.result{background:linear-gradient(140deg,#ff8a5c,#ff5c8a 45%,#8b5cf6);color:#fff;box-shadow:0 24px 60px rgba(139,92,246,.3)}
+.result .bar{background:rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
+/* why */
+.why .redglow{background:radial-gradient(ellipse at 20% 50%,rgba(255,138,92,.35),transparent 60%)}
+.tbl{background:#fff;box-shadow:var(--shadow)}
+.tbl h3{background:var(--ai);color:#fff}
+.tbl.them h3{background:#ece9f1;color:var(--muted)}
+.circles span:first-child{background:var(--ai);color:#fff}
+.circles span:last-child{background:#fff;color:var(--text);box-shadow:var(--shadow)}
+/* pricing */
+.plan{background:#fff;box-shadow:var(--shadow)}
+.plan.pop{border-color:rgba(139,92,246,.45)}
+.plan.pop .top::before{background:radial-gradient(circle,rgba(139,92,246,.22),transparent 65%)}
+.plan .tagp{background:#fff;color:var(--violet);border-color:var(--violet)}
+.plan li::before{color:var(--violet)}
+.plan .tl b{color:var(--text)}
+/* testimonials, faq */
+.bento::after{background:radial-gradient(circle,rgba(139,92,246,.2),transparent 65%)}
+.bx{background:#fff;box-shadow:var(--shadow)}
+.who i{background:var(--ai);color:#fff}
+details{background:#fff;box-shadow:var(--shadow)}
+/* footer */
+.dunes{background:radial-gradient(ellipse 60% 30% at 50% 0,rgba(139,92,246,.18),transparent 70%),radial-gradient(ellipse 100% 30% at 50% 0,rgba(255,138,92,.2),transparent 70%)}
+.dunes::after{display:none}
+.fcta .leave a,.parent{color:var(--text)!important}
+.fgrid a:hover{color:var(--violet)}
+.parent{background:rgba(139,92,246,.08)}
+/* chrome */
+#boot{background:var(--bg)}
+#boot .pct{color:var(--text)}
+#boot .track{background:#e6e1ee}
+#boot .track i,#prog{background:var(--ai);box-shadow:none}
+#dot{background:var(--violet);box-shadow:0 0 10px rgba(139,92,246,.6)}
+#dot.hov{background:rgba(139,92,246,.12);border-color:var(--violet)}
+.svc::after,.plan::after,.bx::after,.logo-tile::after,.grid4 .cell::after{background:radial-gradient(500px circle at var(--mx) var(--my),rgba(139,92,246,.08),transparent 40%)}
+.hudc::before,.hudc::after{border-color:var(--violet);opacity:.5}
+.rating .avs i{background:var(--ai)}
 </style>
 </head>
 <body>
@@ -465,15 +570,15 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
     <div class="hero-copy">
       <span class="eyebrow"><i></i>AI automation studio · Mumbai</span>
       <h1 data-split="chin">Cut Manual Work in 30 Days</h1>
-      <p class="sub">WhatsApp bots, lead follow-ups, quotations and attendance systems — built for your business at a one-time price.</p>
-      <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15-min call" href="#">Book 15-min Call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
-      <ul class="trust"><li>One-time price</li><li>Live in 30 days</li><li>30 days of support</li></ul>
+      <p class="sub">WhatsApp bots, lead follow ups, quotations and attendance systems, built for your business at a one time price.</p>
+      <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15 min call" href="#">Book 15 min Call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
+      <ul class="trust"><li>One time price</li><li>Live in 30 days</li><li>30 days of support</li></ul>
     </div>
     <div class="hero-side">
       <div class="core" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="ball"></div><div class="visor"><i></i><i></i></div></div>
       <div class="talk neon">
         <div class="pic">K</div>
-        <div><h3>Talk with Kola</h3><small>Automation team · Mumbai</small><a class="btn btn-white" data-wa="a 15-min call" href="#">Book 15-mins Call ↗</a></div>
+        <div><h3>Talk with Kola</h3><small>Automation team · Mumbai</small><a class="btn btn-white" data-wa="a 15 min call" href="#">Book 15 min Call ↗</a></div>
       </div>
     </div>
   </div>
@@ -484,7 +589,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
   <div class="wrap">
     <div class="about">
       <div><span class="label rv">About</span></div>
-      <p class="words">Kola AI is the automation studio of Kola Communications. We build WhatsApp bots, lead follow-ups, quotations and attendance systems that remove the repetitive work your team does every day — at a one-time price, not IT-company pricing.</p>
+      <p class="words">Kola AI is the automation studio of Kola Communications. We build WhatsApp bots, lead follow ups, quotations and attendance systems that remove the repetitive work your team does every day, at a one time price, not IT company pricing.</p>
     </div>
     <p class="logos-cap rv">Trusted by growing teams across Mumbai</p>
     <div class="logos">
@@ -499,15 +604,15 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
   <div class="wrap">
     <div class="ph">
       <div><span class="label rv">Process</span><h2 class="rv">From First Call to Live in 30 Days</h2></div>
-      <p class="muted rv">We map the job first and pick the tool second. Fixed scope, fixed price, fixed date — no surprises.</p>
+      <p class="muted rv">We map the job first and pick the tool second. Fixed scope, fixed price, fixed date, no surprises.</p>
     </div>
     <ol class="steps">
-      <li class="step rv"><div class="sn">01</div><span class="when">Day 1</span><h3>Map the Task</h3><p>A 15-minute call to find the task eating the most hours in your week.</p><ul><li>Free workflow review</li><li>Hours-saved estimate</li></ul></li>
-      <li class="step rv d1"><div class="sn">02</div><span class="when">Day 2–3</span><h3>Fix the Price</h3><p>Fixed scope, one-time price and a go-live date — agreed in writing.</p><ul><li>Written proposal</li><li>No hourly billing</li></ul></li>
-      <li class="step rv d2"><div class="sn">03</div><span class="when">Week 1–3</span><h3>Build &amp; Test</h3><p>Built on WhatsApp, Sheets and your CRM — tools your team already uses.</p><ul><li>Weekly demo</li><li>Tested on real data</li></ul></li>
-      <li class="step rv d3"><div class="sn">04</div><span class="when">Day 30</span><h3>Hand Over</h3><p>Training, a short video guide and 30 days of support. You own it.</p><ul><li>Team training</li><li>30-day support</li></ul></li>
+      <li class="step rv"><div class="sn">01</div><span class="when">Day 1</span><h3>Map the Task</h3><p>A 15 minute call to find the task eating the most hours in your week.</p><ul><li>Free workflow review</li><li>Hours saved estimate</li></ul></li>
+      <li class="step rv d1"><div class="sn">02</div><span class="when">Day 2 to 3</span><h3>Fix the Price</h3><p>Fixed scope, one time price and a go live date, agreed in writing.</p><ul><li>Written proposal</li><li>No hourly billing</li></ul></li>
+      <li class="step rv d2"><div class="sn">03</div><span class="when">Week 1 to 3</span><h3>Build &amp; Test</h3><p>Built on WhatsApp, Sheets and your CRM, tools your team already uses.</p><ul><li>Weekly demo</li><li>Tested on real data</li></ul></li>
+      <li class="step rv d3"><div class="sn">04</div><span class="when">Day 30</span><h3>Hand Over</h3><p>Training, a short video guide and 30 days of support. You own it.</p><ul><li>Team training</li><li>30 day support</li></ul></li>
     </ol>
-    <div class="pcta rv"><span class="muted">Not sure which task to automate first?</span><a class="btn btn-fire" data-wa="starting a project" href="#">Start with a free 15-min call ↗</a></div>
+    <div class="pcta rv"><span class="muted">Not sure which task to automate first?</span><a class="btn btn-fire" data-wa="starting a project" href="#">Start with a free 15 min call ↗</a></div>
   </div>
 </section>
 
@@ -519,11 +624,11 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
     <article class="svc rv">
       <div class="vis"><div class="panel">
         <div class="bub l" style="animation-delay:.3s">Hi, I saw your 2BHK ad in Kandivali</div>
-        <div class="bub r" style="animation-delay:1s">Hi! 👋 Budget? 1) Under ₹1Cr 2) ₹1–1.5Cr 3) Above</div>
+        <div class="bub r" style="animation-delay:1s">Hi! 👋 Budget? 1) Under ₹1Cr 2) ₹1 to 1.5Cr 3) Above</div>
         <div class="bub l" style="animation-delay:1.7s">2</div>
-        <div class="bub r" style="animation-delay:2.4s">Site visit Saturday — 11am or 4pm?</div>
+        <div class="bub r" style="animation-delay:2.4s">Site visit Saturday, 11am or 4pm?</div>
       </div></div>
-      <div class="txt"><h3>Real Estate Lead Follow-up on WhatsApp</h3><p>Every portal and ad lead gets an instant reply, is qualified on budget, and is booked for a site visit — while your team sleeps.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one-time</p><a class="btn btn-dark" data-wa="real estate lead follow-up" href="#">Get this for my business ↗</a><div class="chips"><span>Instant lead reply</span><span>Budget qualification</span><span>Site-visit booking</span><span>Day 1/3/7 follow-ups</span></div></div>
+      <div class="txt"><h3>Real Estate Lead Follow up on WhatsApp</h3><p>Every portal and ad lead gets an instant reply, is qualified on budget, and is booked for a site visit, while your team sleeps.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one time</p><a class="btn btn-dark" data-wa="real estate lead follow up" href="#">Get this for my business ↗</a><div class="chips"><span>Instant lead reply</span><span>Budget qualification</span><span>Site visit booking</span><span>Day 1/3/7 follow ups</span></div></div>
     </article>
 
     <article class="svc flip rv">
@@ -532,7 +637,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
         <svg viewBox="0 0 100 160" preserveAspectRatio="none"><path d="M0 80 C40 80 50 20 100 20"/><path d="M0 80 L100 80"/><path d="M0 80 C40 80 50 140 100 140"/></svg>
         <div class="outs"><div>Quote PDF</div><div>WhatsApp sent</div><div>Logged in CRM</div></div>
       </div></div></div>
-      <div class="txt"><h3>Auto-generate Quotations from Enquiries</h3><p>An enquiry comes in on a form or WhatsApp; a branded PDF quote goes out in seconds and is logged to your sheet or CRM.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one-time</p><a class="btn btn-dark" data-wa="auto quotations" href="#">Get this for my business ↗</a><div class="chips"><span>Enquiry capture</span><span>Branded PDF quotes</span><span>GST calculation</span><span>CRM logging</span></div></div>
+      <div class="txt"><h3>Auto generate Quotations from Enquiries</h3><p>An enquiry comes in on a form or WhatsApp; a branded PDF quote goes out in seconds and is logged to your sheet or CRM.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one time</p><a class="btn btn-dark" data-wa="auto quotations" href="#">Get this for my business ↗</a><div class="chips"><span>Enquiry capture</span><span>Branded PDF quotes</span><span>GST calculation</span><span>CRM logging</span></div></div>
     </article>
 
     <article class="svc rv">
@@ -540,7 +645,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
         <div class="map"><i>👤</i><i class="on">📍</i><i>👤</i><i>👤</i><i class="on">📍</i><i>👤</i><i class="on">📍</i><i>👤</i><i>👤</i><i>👤</i></div>
         <div style="font-size:13px;color:var(--muted);align-self:flex-start">9:02 AM · 18/20 checked in inside geofence</div>
       </div></div>
-      <div class="txt"><h3>Attendance with Geofenced Selfie Punch-in</h3><p>Staff punch in with a selfie and location check. Managers get daily reports, and payroll gets a clean export. Already running for TFF.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one-time</p><a class="btn btn-dark" data-wa="geofenced attendance" href="#">Get this for my business ↗</a><div class="chips"><span>Selfie + GPS check</span><span>Daily manager reports</span><span>Payroll exports</span><span>Android &amp; iOS</span></div></div>
+      <div class="txt"><h3>Attendance with Geofenced Selfie Punch in</h3><p>Staff punch in with a selfie and location check. Managers get daily reports, and payroll gets a clean export. Already running for TFF.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one time</p><a class="btn btn-dark" data-wa="geofenced attendance" href="#">Get this for my business ↗</a><div class="chips"><span>Selfie + GPS check</span><span>Daily manager reports</span><span>Payroll exports</span><span>Android &amp; iOS</span></div></div>
     </article>
 
     <article class="svc flip rv">
@@ -549,7 +654,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
         <div class="pill">₹4.2L</div>
         <div class="bars"><i style="--h:25%"></i><i style="--h:40%"></i><i style="--h:35%"></i><i style="--h:60%"></i><i style="--h:90%"></i></div>
       </div></div>
-      <div class="txt"><h3>CRM Pipeline &amp; Daily Sales Report</h3><p>Every lead lands in one place, gets auto-assigned to a rep, and you get a morning summary on WhatsApp.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one-time</p><a class="btn btn-dark" data-wa="CRM pipeline" href="#">Get this for my business ↗</a><div class="chips"><span>Lead capture &amp; routing</span><span>Follow-up sequences</span><span>Payment reminders</span><span>WhatsApp summaries</span></div></div>
+      <div class="txt"><h3>CRM Pipeline &amp; Daily Sales Report</h3><p>Every lead lands in one place, gets auto assigned to a rep, and you get a morning summary on WhatsApp.</p><p class="price muted">Starting at <b>₹XX,XXX</b> one time</p><a class="btn btn-dark" data-wa="CRM pipeline" href="#">Get this for my business ↗</a><div class="chips"><span>Lead capture &amp; routing</span><span>Follow up sequences</span><span>Payment reminders</span><span>WhatsApp summaries</span></div></div>
     </article>
   </div>
 </section>
@@ -574,8 +679,8 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 <section id="calculator">
   <div class="wrap">
     <div class="split">
-      <div><span class="label rv">Hours-saved calculator</span><h2 class="rv">What Is Manual Work Costing You?</h2></div>
-      <p class="muted rv">Move the sliders and see your own number. Then decide if it's worth a 15-minute call.</p>
+      <div><span class="label rv">Hours saved calculator</span><h2 class="rv">What Is Manual Work Costing You?</h2></div>
+      <p class="muted rv">Move the sliders and see your own number. Then decide if it's worth a 15 minute call.</p>
     </div>
     <div class="calc">
       <div class="rv">
@@ -588,7 +693,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
         <div class="grain"></div>
         <div style="position:relative"><h3>You could save every year</h3><div class="num" id="save">₹0</div></div>
         <div style="position:relative">
-          <div class="bar"><div><b id="hrs">0</b>Hours freed / year</div><div><b>₹XX,XXX</b>Typical build</div><div><b id="payback">—</b>Payback</div></div>
+          <div class="bar"><div><b id="hrs">0</b>Hours freed / year</div><div><b>₹XX,XXX</b>Typical build</div><div><b id="payback"></b>Payback</div></div>
           <a class="btn btn-fire" id="calc-wa" href="#" style="width:100%;margin-top:14px">Fix this for me on WhatsApp ↗</a>
         </div>
       </div>
@@ -602,9 +707,9 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
   <div class="wrap" style="position:relative">
     <div class="head"><span class="label rv">Why us</span><h2 class="rv">Built for Results, Not Retainers</h2></div>
     <div class="vs">
-      <div class="tbl rv"><h3>Kola AI</h3><ul><li>Price published upfront</li><li>Process mapping first</li><li>Weeks, not months</li><li>One-time cost, you own it</li><li>Backed by the full Kola team</li></ul></div>
+      <div class="tbl rv"><h3>Kola AI</h3><ul><li>Price published upfront</li><li>Process mapping first</li><li>Weeks, not months</li><li>One time cost, you own it</li><li>Backed by the full Kola team</li></ul></div>
       <div class="circles rv d1"><span>Kola<br>AI</span><span>IT<br>Company</span></div>
-      <div class="tbl them rv d2"><h3>Typical IT Company</h3><ul><li class="x">"Contact us for pricing"</li><li class="x">Tool-first approach</li><li class="x">Most often delayed</li><li class="x">Ongoing licence fees</li><li>Scope creep common</li></ul></div>
+      <div class="tbl them rv d2"><h3>Typical IT Company</h3><ul><li class="x">"Contact us for pricing"</li><li class="x">Tool first approach</li><li class="x">Most often delayed</li><li class="x">Ongoing licence fees</li><li>Scope creep common</li></ul></div>
     </div>
   </div>
 </section>
@@ -615,16 +720,16 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
     <div class="left">
       <span class="label rv">Pricing plan</span>
       <h2 class="rv">Starting Prices, in Public</h2>
-      <p class="muted rv">Fixed scope. One-time payment. No surprises. Most agencies hide the price — we'd rather you qualify yourself.</p>
+      <p class="muted rv">Fixed scope. One time payment. No surprises. Most agencies hide the price, we'd rather you qualify yourself.</p>
       <div class="rating rv"><span class="avs"><i></i><i></i><i></i></span><span class="stars">★★★★★</span><span>Trusted by Kola clients across India</span></div>
     </div>
     <div class="plans">
-      <div class="plan rv"><div class="top"><h3>Starter</h3><p class="sub">One task, automated end-to-end</p><div class="amt">₹XX,XXX <small>one-time</small></div></div>
-        <div class="bot"><h4>Whats included:</h4><ul><li>1 automation flow</li><li>Up to 2 integrations</li><li>WhatsApp or web</li><li>15-day support</li></ul><a class="btn btn-dark" data-wa="Starter package" href="#">Start Project ↗</a><p class="tl">Timeline <b>1–2 weeks</b></p></div></div>
-      <div class="plan pop neon rv"><div class="top"><h3>Growth <span class="tagp">Popular</span></h3><p class="sub">For teams that want a real system</p><div class="amt">₹XX,XXX <small>one-time</small></div></div>
-        <div class="bot"><h4>Whats included:</h4><ul><li>Up to 3 automation flows</li><li>AI chat agent</li><li>CRM + dashboard</li><li>Knowledge base training</li><li>30-day support</li></ul><a class="btn btn-dark" data-wa="Growth package" href="#">Start Project ↗</a><p class="tl">Timeline <b>2–4 weeks</b></p></div></div>
+      <div class="plan rv"><div class="top"><h3>Starter</h3><p class="sub">One task, automated end to end</p><div class="amt">₹XX,XXX <small>one time</small></div></div>
+        <div class="bot"><h4>Whats included:</h4><ul><li>1 automation flow</li><li>Up to 2 integrations</li><li>WhatsApp or web</li><li>15 day support</li></ul><a class="btn btn-dark" data-wa="Starter package" href="#">Start Project ↗</a><p class="tl">Timeline <b>1 to 2 weeks</b></p></div></div>
+      <div class="plan pop neon rv"><div class="top"><h3>Growth <span class="tagp">Popular</span></h3><p class="sub">For teams that want a real system</p><div class="amt">₹XX,XXX <small>one time</small></div></div>
+        <div class="bot"><h4>Whats included:</h4><ul><li>Up to 3 automation flows</li><li>AI chat agent</li><li>CRM + dashboard</li><li>Knowledge base training</li><li>30 day support</li></ul><a class="btn btn-dark" data-wa="Growth package" href="#">Start Project ↗</a><p class="tl">Timeline <b>2 to 4 weeks</b></p></div></div>
       <div class="plan rv"><div class="top"><h3>Custom</h3><p class="sub">Apps, attendance systems, larger builds</p><div class="amt">₹X,XX,XXX+ <small>scoped</small></div></div>
-        <div class="bot"><h4>Whats included:</h4><ul><li>Unlimited workflows</li><li>Custom app / portal</li><li>Full audit + 90-day plan</li><li>Dedicated success manager</li></ul><a class="btn btn-dark" data-wa="Custom package" href="#">Start Project ↗</a><p class="tl">Timeline <b>4–8 weeks</b></p></div></div>
+        <div class="bot"><h4>Whats included:</h4><ul><li>Unlimited workflows</li><li>Custom app / portal</li><li>Full audit + 90 day plan</li><li>Dedicated success manager</li></ul><a class="btn btn-dark" data-wa="Custom package" href="#">Start Project ↗</a><p class="tl">Timeline <b>4 to 8 weeks</b></p></div></div>
     </div>
   </div>
 </section>
@@ -636,10 +741,10 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
     <div class="bento">
       <div class="colb">
         <div class="bx row rv"><span class="rating" style="margin:0"><span class="avs"><i></i><i></i><i></i></span></span><div style="text-align:right"><b style="font-size:22px;font-weight:500">40+</b><div class="muted" style="font-size:13px">Kola clients</div></div></div>
-        <div class="bx rv"><div class="big">100%</div><span class="muted">Attendance without paper</span><div class="q">"</div><blockquote>Kola built our attendance app with geofenced punch-in. Coaches mark in from the ground and reports land automatically.</blockquote><div class="who"><i>T</i><div><b>TFF</b><span class="muted">Attendance app</span></div></div></div>
+        <div class="bx rv"><div class="big">100%</div><span class="muted">Attendance without paper</span><div class="q">"</div><blockquote>Kola built our attendance app with geofenced punch in. Coaches mark in from the ground and reports land automatically.</blockquote><div class="who"><i>T</i><div><b>TFF</b><span class="muted">Attendance app</span></div></div></div>
       </div>
       <div class="colb">
-        <div class="bx rv d1"><div class="big">24/7</div><span class="muted">Lead replies</span><div class="q">"</div><blockquote>Add a real client quote here once your first automation goes live — with their name and a number.</blockquote><div class="who"><i>?</i><div><b>Your next client</b><span class="muted">Real estate</span></div></div></div>
+        <div class="bx rv d1"><div class="big">24/7</div><span class="muted">Lead replies</span><div class="q">"</div><blockquote>Add a real client quote here once your first automation goes live, with their name and a number.</blockquote><div class="who"><i>?</i><div><b>Your next client</b><span class="muted">Real estate</span></div></div></div>
         <div class="bx row rv d1"><div><b style="font-size:22px;font-weight:500">Mumbai</b><div class="muted" style="font-size:13px">Kandivali West</div></div><span class="stars">★★★★★</span></div>
       </div>
     </div>
@@ -655,11 +760,11 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
       <a class="btn btn-dark rv" data-wa="a question" href="#">Ask a Question ↗</a>
     </div>
     <div>
-      <details class="rv"><summary>How much does AI automation cost in India?</summary><p>Most single-task automations start at ₹XX,XXX one-time. You pay once and own the system; there are no per-seat fees from us.</p></details>
-      <details class="rv"><summary>How long does implementation take?</summary><p>Most projects go live in 2–4 weeks. Custom apps take longer, and we give you a fixed date before we start.</p></details>
-      <details class="rv"><summary>Do I need to change my tools?</summary><p>No. We build on WhatsApp, Google Sheets, your CRM and your website — whatever your team already uses.</p></details>
+      <details class="rv"><summary>How much does AI automation cost in India?</summary><p>Most single task automations start at ₹XX,XXX one time. You pay once and own the system; there are no per seat fees from us.</p></details>
+      <details class="rv"><summary>How long does implementation take?</summary><p>Most projects go live in 2 to 4 weeks. Custom apps take longer, and we give you a fixed date before we start.</p></details>
+      <details class="rv"><summary>Do I need to change my tools?</summary><p>No. We build on WhatsApp, Google Sheets, your CRM and your website, whatever your team already uses.</p></details>
       <details class="rv"><summary>Is my data safe?</summary><p>Your data stays in your own accounts. We use official WhatsApp Business APIs and hand over all logins at the end.</p></details>
-      <details class="rv"><summary>Is Kola AI suitable for small businesses?</summary><p>Yes — the Starter plan is built for one painful task at a small team. Use the calculator to see if it pays back.</p></details>
+      <details class="rv"><summary>Is Kola AI suitable for small businesses?</summary><p>Yes, the Starter plan is built for one painful task at a small team. Use the calculator to see if it pays back.</p></details>
       <details class="rv"><summary>Who is behind Kola AI?</summary><p>Kola AI is the automation studio of Kola Communications, a Mumbai agency that also builds websites, SEO and apps. One team, one contract.</p></details>
     </div>
   </div>
@@ -671,7 +776,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
   <div class="wrap">
     <div class="fcta">
       <span class="label rv">Let's get started</span>
-      <h2 class="rv">Stop Paying People to Copy-Paste</h2>
+      <h2 class="rv">Stop Paying People to Copy Paste</h2>
       <p class="muted rv">Tell us the one task you'd automate first. We'll reply with a price and a date.</p>
       <div class="row rv"><a class="btn btn-fire" data-wa href="#">WhatsApp Us ↗</a><a class="btn btn-dark" href="mailto:business@kolacommunications.com">Email the Team</a></div>
       <p class="leave">Not ready to talk? <a href="#calculator">Run the calculator</a> or <a href="#use-cases">browse use cases</a>.</p>
@@ -691,7 +796,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 <script>
 // WhatsApp: one number, site-specific prefilled message so leads can be traced to this site
 const WA = '918928984774';
-const waLink = topic => 'https://wa.me/' + WA + '?text=' + encodeURIComponent("Hi, I'm on the Kola AI automation site" + (topic ? ' — interested in ' + topic : '') + '.');
+const waLink = topic => 'https://wa.me/' + WA + '?text=' + encodeURIComponent("Hi, I'm on the Kola AI automation site" + (topic ? ', interested in ' + topic : '') + '.');
 document.querySelectorAll('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
 
 // Split headings into per-character spans with staggered delays
@@ -754,7 +859,7 @@ function calc() {
   $('save').textContent = inr(saved);
   const months = BUILD_COST / (saved / 12);
   $('payback').textContent = months < 1 ? '< 1 mo' : months.toFixed(1) + ' mo';
-  $('calc-wa').href = waLink('automation — my calculator shows ' + inr(saved) + '/year saved');
+  $('calc-wa').href = waLink('automation, my calculator shows ' + inr(saved) + '/year saved');
 }
 ['team', 'hours', 'sal', 'auto'].forEach(id => $(id).addEventListener('input', calc));
 calc();
@@ -813,7 +918,7 @@ document.querySelectorAll('a,button,summary,input').forEach(el => {
     for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
       const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
       if (d < 130) {
-        x.strokeStyle = `rgba(254,${90 + (d | 0)},40,${(1 - d / 130) * .35})`; x.lineWidth = .7;
+        x.strokeStyle = `rgba(${200 - (d | 0)},${90 + (d | 0) / 2},246,${(1 - d / 130) * .25})`; x.lineWidth = .7;
         x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.stroke();
         if (!reduce && Math.random() < .0006) pulses.push({ a, b, t: 0 });
       }
@@ -824,7 +929,7 @@ document.querySelectorAll('a,button,summary,input').forEach(el => {
       x.fillStyle = '#ffd0a0'; x.shadowColor = '#fe4006'; x.shadowBlur = 12;
       x.beginPath(); x.arc(s.a.x + (s.b.x - s.a.x) * s.t, s.a.y + (s.b.y - s.a.y) * s.t, 2, 0, 7); x.fill(); x.shadowBlur = 0;
     }
-    for (const p of pts) { x.fillStyle = 'rgba(255,190,150,.85)'; x.beginPath(); x.arc(p.x, p.y, p.r, 0, 7); x.fill(); }
+    for (const p of pts) { x.fillStyle = 'rgba(139,92,246,.55)'; x.beginPath(); x.arc(p.x, p.y, p.r, 0, 7); x.fill(); }
     if (!reduce) requestAnimationFrame(draw);
   })();
 })();
@@ -849,7 +954,7 @@ setInterval(() => { if (reduce) return; wm.classList.remove('glitch'); void wm.o
 if ($('tick')) $('tick').innerHTML += $('tick').innerHTML;
 
 // Decode / scramble effect on section headings when they reveal
-const glyphs = '!<>-_\\/[]{}—=+*^?#01ABCDEF';
+const glyphs = '!<>_/[]{}=+*^?#01ABCDEF';
 function scramble(el) {
   const final = el.textContent; let f = 0;
   const q = [...final].map(c => ({ c, s: Math.random() * 18 | 0, e: (Math.random() * 18 | 0) + 14 }));
