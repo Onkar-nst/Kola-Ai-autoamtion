@@ -379,6 +379,25 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 .scr{font-variant-numeric:tabular-nums}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.ch,.bub,.talk{opacity:1!important;transform:none!important;filter:none!important}.bars i{height:var(--h)!important}#boot{display:none}}
+
+/* hero v2: two-column layout so text never sits on the orb */
+.hero{justify-content:center;padding:140px 0 90px}
+.hero .glow{opacity:.7}
+.wordmark{top:auto;bottom:-4vw;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.09);filter:none;z-index:0}
+.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero-copy{max-width:620px;min-width:0}
+.hero-grid>*{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#ddd;padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:rgba(10,11,14,.6);backdrop-filter:blur(8px);margin-bottom:22px}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:#2bd46b;box-shadow:0 0 8px #2bd46b}
+.hero h1{font-size:clamp(42px,5.4vw,78px);line-height:1.02;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero .sub{font-size:18px;color:#cfcfd4;margin:20px 0 28px;max-width:520px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .term{max-width:480px;margin-top:26px}
+.hero-side{display:flex;flex-direction:column;align-items:center;gap:24px}
+.core{position:relative;left:auto;top:auto;transform:none;width:min(32vw,400px)}
+.core .ring:first-child{background:none;opacity:1;mix-blend-mode:normal}
+.hud.tl,.hud.tr{top:100px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.core{width:60vw;order:-1}.hero-side{order:-1}.hud{display:none}.hero{padding-top:110px}.hero .sub{font-size:16px}.hero-cta .btn{flex:1}}
 </style>
 </head>
 <body>
@@ -405,14 +424,21 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
   <div class="hud tl"><span class="live">SYSTEM ONLINE</span><br>MODEL <b>kola-agent-v2</b><br>LATENCY <b id="lat">42ms</b></div>
   <div class="hud tr">AUTOMATIONS RUNNING <b id="runs">1,284</b><br>HOURS SAVED TODAY <b id="hsv">312</b><br>NODE <b>MUMBAI-01</b></div>
   <div class="wordmark" data-split="up">kola.ai</div>
-  <div class="core" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="ball"></div><div class="visor"><i></i><i></i></div></div>
   <div class="fade"></div>
-  <div class="wrap hero-bottom">
-    <div><h1 data-split="chin">Cut Manual Work in 30 Days</h1>
-    <div class="term"><span class="p">kola@ai:~$</span> <span id="tt"></span><span class="caret"></span></div></div>
-    <div class="talk neon">
-      <div class="pic">K</div>
-      <div><h3>Talk with Kola</h3><small>Automation team · Mumbai</small><a class="btn btn-white" data-wa="a 15-min call" href="#">Book 15-mins Call ↗</a></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><i></i>AI automation studio · Mumbai</span>
+      <h1 data-split="chin">Cut Manual Work in 30 Days</h1>
+      <p class="sub">WhatsApp bots, lead follow-ups, quotations and attendance systems — built for your business at a one-time price.</p>
+      <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15-min call" href="#">Book 15-min Call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
+      <div class="term"><span class="p">kola@ai:~$</span> <span id="tt"></span><span class="caret"></span></div>
+    </div>
+    <div class="hero-side">
+      <div class="core" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="ball"></div><div class="visor"><i></i><i></i></div></div>
+      <div class="talk neon">
+        <div class="pic">K</div>
+        <div><h3>Talk with Kola</h3><small>Automation team · Mumbai</small><a class="btn btn-white" data-wa="a 15-min call" href="#">Book 15-mins Call ↗</a></div>
+      </div>
     </div>
   </div>
 </header>
@@ -679,7 +705,7 @@ const wm = document.querySelector('.wordmark'), core = document.querySelector('.
 addEventListener('scroll', () => {
   const y = scrollY; if (y > innerHeight) return;
   wm.style.transform = 'translateY(' + y * .35 + 'px)';
-  core.style.transform = 'translateX(-50%) translateY(' + y * .15 + 'px)';
+  core.style.transform = 'translateY(' + y * .1 + 'px)';
 }, { passive: true });
 
 // Hours-saved calculator
