@@ -637,7 +637,6 @@ h1,h2{font-weight:600;letter-spacing:-.04em}
 @media(max-width:900px){.hero-side{order:0}.mock{width:100%}}
 .vis .panel .bub.l{color:#0b0b1f}
 .hero{min-height:auto;padding:150px 0 90px}
-.genie{text-shadow:none!important}
 .hero h1 .ch{animation:none;opacity:1;filter:none;transform:none}
 
 /* compact nav */
@@ -668,6 +667,9 @@ nav .btn{padding:10px 18px;font-size:14px}
 .vz-float.f1{top:-6px;left:-44px}
 .vz-float.f2{bottom:0;right:-32px;animation-delay:-3s}
 @media(max-width:900px){.viz{width:100%;padding:30px 0}.vz-float.f1{left:0}.vz-float.f2{right:0}}
+.fadeh{opacity:0;transition:opacity .9s ease}
+.fadeh.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.fadeh{opacity:1}}
 </style>
 </head>
 <body>
@@ -1077,13 +1079,11 @@ setInterval(() => { if (reduce) return; wm.classList.remove('glitch'); void wm.o
 // Duplicate ticker for seamless loop
 if ($('tick')) $('tick').innerHTML += $('tick').innerHTML;
 
-// Genie effect: headings pour in from a narrow point and vanish again when they leave view
-if (!reduce) {
-  const gh = document.querySelectorAll('h1, h2, h3:not(.mock h3)');
-  gh.forEach(h => { h.classList.remove('rv'); h.classList.add('genie'); });
-  const go = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('on', e.isIntersecting)), { threshold: .35 });
-  gh.forEach(h => go.observe(h));
-}
+// Headings: soft fade only, no movement
+const gh = document.querySelectorAll('h1, h2, h3');
+gh.forEach(h => { h.classList.remove('rv'); h.classList.add('fadeh'); });
+const go = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); go.unobserve(e.target); } }), { threshold: .2 });
+gh.forEach(h => go.observe(h));
 
 // Card spotlight follows the mouse, plus HUD corner brackets and 3D tilt
 document.querySelectorAll('.svc,.plan,.bx,.logo-tile,.grid4 .cell').forEach(el => {
