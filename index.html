@@ -177,6 +177,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:9
 .irow.rev{animation-direction:reverse}
 .irow:nth-child(2){margin-left:-60px}
 .irow div{width:120px;height:120px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(10,11,14,.6);display:grid;place-items:center;font-size:15px;font-weight:600;text-align:center;line-height:1.1;color:#eee}
+.irow div{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;font-size:12px;font-weight:500;color:var(--muted)}
+.irow img{width:40px;height:40px;filter:invert(1);opacity:.9;transition:opacity .3s,transform .3s}
+.irow div:hover img{opacity:1;transform:scale(1.1)}
+.irow .wm{font-size:17px;font-weight:700;color:#eee}
 .irow div svg{width:50px;height:50px}
 @keyframes mq{to{transform:translateX(-50%)}}
 @media(max-width:600px){.irow div{width:84px;height:84px;font-size:12px}}
@@ -496,13 +500,13 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
   <div class="head"><span class="label rv">Integrations</span><h2 class="rv">Built on Tools Your Team Already Uses</h2></div>
   <div class="icons rv">
     <div class="irow" data-row>
-      <div>WhatsApp</div><div>Google Sheets</div><div>ChatGPT</div><div>Zoho CRM</div><div>Razorpay</div><div>Gmail</div><div>Claude</div><div>HubSpot</div>
+      <div><img src="images/logos/whatsapp.svg" alt="" loading="lazy"><span>WhatsApp</span></div><div><img src="images/logos/googlesheets.svg" alt="" loading="lazy"><span>Google Sheets</span></div><div><img src="images/logos/openai.svg" alt="" loading="lazy"><span>ChatGPT</span></div><div><img src="images/logos/zoho.svg" alt="" loading="lazy"><span>Zoho CRM</span></div><div><img src="images/logos/razorpay.svg" alt="" loading="lazy"><span>Razorpay</span></div><div><img src="images/logos/gmail.svg" alt="" loading="lazy"><span>Gmail</span></div><div><img src="images/logos/claude.svg" alt="" loading="lazy"><span>Claude</span></div><div><img src="images/logos/hubspot.svg" alt="" loading="lazy"><span>HubSpot</span></div>
     </div>
     <div class="irow rev" data-row>
-      <div>n8n</div><div>Make</div><div>Tally</div><div>Shopify</div><div>Gemini</div><div>Slack</div><div>Calendly</div><div>Excel</div>
+      <div><img src="images/logos/n8n.svg" alt="" loading="lazy"><span>n8n</span></div><div><img src="images/logos/make.svg" alt="" loading="lazy"><span>Make</span></div><div><b class="wm">Tally</b></div><div><img src="images/logos/shopify.svg" alt="" loading="lazy"><span>Shopify</span></div><div><img src="images/logos/googlegemini.svg" alt="" loading="lazy"><span>Gemini</span></div><div><img src="images/logos/slack.svg" alt="" loading="lazy"><span>Slack</span></div><div><img src="images/logos/calendly.svg" alt="" loading="lazy"><span>Calendly</span></div><div><b class="wm">Excel</b></div>
     </div>
     <div class="irow" data-row>
-      <div>Meta Lead Ads</div><div>99acres</div><div>MagicBricks</div><div>IndiaMART</div><div>Google Forms</div><div>Notion</div><div>Twilio</div><div>Airtable</div>
+      <div><img src="images/logos/meta.svg" alt="" loading="lazy"><span>Meta Lead Ads</span></div><div><b class="wm">99acres</b></div><div><b class="wm">MagicBricks</b></div><div><b class="wm">IndiaMART</b></div><div><img src="images/logos/googleforms.svg" alt="" loading="lazy"><span>Google Forms</span></div><div><img src="images/logos/notion.svg" alt="" loading="lazy"><span>Notion</span></div><div><img src="images/logos/twilio.svg" alt="" loading="lazy"><span>Twilio</span></div><div><img src="images/logos/airtable.svg" alt="" loading="lazy"><span>Airtable</span></div>
     </div>
   </div>
 </section>
