@@ -66,7 +66,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:9
 .hero .glow{position:absolute;inset:0;background:
   radial-gradient(ellipse 45% 55% at 18% 35%,rgba(254,64,6,.85),transparent 70%),
   radial-gradient(ellipse 30% 40% at 52% 40%,rgba(244,40,40,.6),transparent 70%),
-  radial-gradient(ellipse 70% 40% at 50% 100%,rgba(3,4,7,1),transparent);
+  radial-gradient(ellipse 70% 40% at 50% 100%,rgba(3,4,7,1),transparent),
+  url(images/hero.jpg) center 70%/cover no-repeat;
   animation:breathe 8s ease-in-out infinite}
 @keyframes breathe{50%{opacity:.75;transform:scale(1.05)}}
 .hero .fade{position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(transparent,var(--bg))}
@@ -136,6 +137,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:9
 .vis{position:relative;border-radius:10px;overflow:hidden;background:
   radial-gradient(ellipse 80% 70% at 100% 100%,#ffe9d6 0%,#ff9a3c 18%,#fe4006 35%,#8d0a0a 60%,#14060a 85%);min-height:360px;display:grid;place-items:center}
 .svc.flip .vis{background:radial-gradient(ellipse 80% 70% at 100% 0%,#ffb067 0%,#fe4006 25%,#c0102a 50%,#16060b 85%)}
+.svc .vis{background:#07080b center/cover no-repeat}
+.svc:nth-of-type(1) .vis{background-image:url(images/svc-1.jpg)}.svc:nth-of-type(2) .vis{background-image:url(images/svc-2.jpg)}.svc:nth-of-type(3) .vis{background-image:url(images/svc-3.jpg)}.svc:nth-of-type(4) .vis{background-image:url(images/svc-4.jpg)}
+.core .ring:first-child{background:url(images/orb.jpg) center/cover;border-radius:50%;opacity:.55;mix-blend-mode:screen}
+.talk .pic{background:url(images/avatar.jpg) center/cover}
 .vis .panel{position:relative;width:78%;height:72%;border-radius:14px;background:rgba(18,19,22,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;padding:18px;gap:14px;flex-direction:column;overflow:hidden}
 .ai-chip{width:62px;height:62px;border-radius:14px;background:linear-gradient(160deg,#5b5b60,#2a2b30);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;font-size:24px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 /* chat bubbles inside panel */
@@ -187,7 +192,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:9
 input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:3px;background:#26272c;border-radius:3px;outline:none}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(254,64,6,.35);cursor:pointer}
 input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 6px rgba(254,64,6,.35)}
-.result{position:relative;border-radius:var(--radius);overflow:hidden;padding:30px;min-height:460px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(ellipse 70% 70% at 60% 30%,#ff7a2a,#d4140f 40%,#5d0707 75%,#200406)}
+.result{position:relative;border-radius:var(--radius);overflow:hidden;padding:30px;min-height:460px;display:flex;flex-direction:column;justify-content:space-between;background:url(images/result.jpg) center/cover,radial-gradient(ellipse 70% 70% at 60% 30%,#ff7a2a,#d4140f 40%,#5d0707 75%,#200406)}
 .result h3{font-size:30px}
 .result .num{font-size:clamp(46px,6vw,84px);font-weight:600;letter-spacing:-.05em;line-height:1}
 .result .bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;background:rgba(20,20,24,.65);backdrop-filter:blur(10px);border-radius:10px;padding:16px 18px;font-size:12px;color:var(--muted)}
