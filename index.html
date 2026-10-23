@@ -670,6 +670,45 @@ nav .btn{padding:10px 18px;font-size:14px}
 .fadeh{opacity:0;transition:opacity .9s ease}
 .fadeh.on{opacity:1}
 @media(prefers-reduced-motion:reduce){.fadeh{opacity:1}}
+
+/* ===== HERO v4: centered ===== */
+.hero2{min-height:auto;padding:130px 0 70px;display:block;text-align:center;overflow:hidden}
+.h2bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(60% 50% at 50% 0%,rgba(91,92,224,.16),transparent 70%),
+  linear-gradient(rgba(47,48,156,.05) 1px,transparent 1px) 0 0/48px 48px,
+  linear-gradient(90deg,rgba(47,48,156,.05) 1px,transparent 1px) 0 0/48px 48px;
+  mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent)}
+.hero2 .wrap{position:relative;z-index:2}
+.h2-copy{max-width:860px;margin:0 auto}
+.hero2 .eyebrow{margin-bottom:24px}
+.hero2 h1{font-size:clamp(42px,6.4vw,88px);line-height:1.02;letter-spacing:-.045em;color:#0b0b1f;background:none;-webkit-background-clip:initial;background-clip:initial}
+.hero2 h1 .hl{background:var(--ai);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero2 .sub{font-size:19px;max-width:640px;margin:22px auto 32px}
+.hero2 .hero-cta{justify-content:center}
+.hero2 .trust{justify-content:center}
+.h2-stage{max-width:980px;margin:64px auto 0}
+.h2-win{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 40px 100px rgba(47,48,156,.16),0 2px 6px rgba(20,22,60,.05);overflow:hidden;text-align:left}
+.h2-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:#fafbff;font-size:13px;color:var(--muted)}
+.h2-bar i{width:10px;height:10px;border-radius:50%;background:#e3e4ee}
+.h2-bar span{margin-left:10px}
+.h2-bar em{margin-left:auto;font-style:normal;display:flex;align-items:center;gap:7px;color:#16a34a;font-weight:500}
+.h2-flow{display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr;align-items:center;padding:36px 30px}
+.nd{padding:20px;border:1px solid var(--line);border-radius:14px;background:#fafbff;opacity:0;animation:chin .6s forwards}
+.nd:nth-child(1){animation-delay:.3s}.nd:nth-child(3){animation-delay:.8s}.nd:nth-child(5){animation-delay:1.3s}
+.nd .ic{width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;margin-bottom:14px}
+.nd .ic img{width:22px;height:22px}
+.nd .ic.brand{border:0;overflow:hidden}.nd .ic.brand img{width:44px;height:44px}
+.nd b{display:block;font-weight:600;font-size:16px}
+.nd small{font-size:13px;color:var(--muted)}
+.nd.hi{background:var(--ai);border-color:transparent;color:#fff;box-shadow:0 16px 36px rgba(47,48,156,.3)}
+.nd.hi small{color:rgba(255,255,255,.75)}
+.ar{height:2px;margin:0 8px;background:repeating-linear-gradient(90deg,#2f309c 0 6px,transparent 6px 12px);opacity:.35;position:relative;background-size:24px 2px;animation:flowx 1.2s linear infinite}
+.ar::after{content:"";position:absolute;right:-2px;top:-4px;border:5px solid transparent;border-left-color:#2f309c}
+@keyframes flowx{to{background-position:24px 0}}
+.h2-works{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:26px;margin-top:34px;color:var(--muted);font-size:13px}
+.h2-works img{width:24px;height:24px;opacity:.55;transition:opacity .3s}
+.h2-works img:hover{opacity:1}
+@media(max-width:900px){.hero2{padding:100px 0 50px}.hero2 .sub{font-size:16px}.h2-flow{grid-template-columns:1fr;padding:20px;gap:0}.ar{width:2px;height:22px;margin:0 auto;background:repeating-linear-gradient(180deg,#2f309c 0 6px,transparent 6px 12px)}.ar::after{display:none}.h2-stage{margin-top:44px}.h2-works{gap:18px}}
 </style>
 </head>
 <body>
@@ -690,33 +729,28 @@ nav .btn{padding:10px 18px;font-size:14px}
 </div></nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="glow"></div><canvas id="net"></canvas>
-  <div class="wordmark" data-split="up">kola.ai</div>
-  <div class="fade"></div>
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow"><i></i>AI automation studio · Mumbai</span>
-      <h1>Cut Manual Work in 30 Days</h1>
-      <p class="sub">WhatsApp bots, lead follow ups, quotations and attendance systems, built for your business at a one time price.</p>
-      <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15 min call" href="#">Book 15 min Call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
+<header class="hero hero2">
+  <div class="h2bg"></div>
+  <div class="wrap">
+    <div class="h2-copy">
+      <span class="eyebrow"><i></i>AI automation studio by Kola Communications</span>
+      <h1>Cut manual work in <span class="hl">30 days</span></h1>
+      <p class="sub">WhatsApp bots, lead follow ups, quotations and attendance systems, built around the tools your team already uses. One time price, you own it.</p>
+      <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15 min call" href="#">Book a free 15 min call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
       <ul class="trust"><li>One time price</li><li>Live in 30 days</li><li>30 days of support</li></ul>
     </div>
-    <div class="hero-side">
-      <div class="viz" aria-hidden="true">
-        <div class="vz-card">
-          <div class="vz-head"><span class="dotlive"></span>Live workflow<em>Real estate leads</em></div>
-          <div class="vz-flow">
-            <div class="vz-step"><span class="ic"><img src="images/logos/whatsapp.svg" alt=""></span><div><b>New enquiry</b><small>WhatsApp, 99acres, Meta ads</small></div><i class="ok">✓</i></div>
-            <div class="vz-line"></div>
-            <div class="vz-step hi"><span class="ic brand"><img src="images/kola-logo-128.png" alt=""></span><div><b>Kola AI qualifies</b><small>Budget, location, timeline</small></div><i class="ok">✓</i></div>
-            <div class="vz-line"></div>
-            <div class="vz-step"><span class="ic"><img src="images/logos/googlesheets.svg" alt=""></span><div><b>Visit booked &amp; logged</b><small>CRM updated, team notified</small></div><i class="ok">✓</i></div>
-          </div>
+    <div class="h2-stage" aria-hidden="true">
+      <div class="h2-win">
+        <div class="h2-bar"><i></i><i></i><i></i><span>Kola AI · Lead automation</span><em><b class="dotlive"></b>Running</em></div>
+        <div class="h2-flow">
+          <div class="nd"><span class="ic"><img src="images/logos/whatsapp.svg" alt=""></span><b>New enquiry</b><small>WhatsApp, 99acres, Meta ads</small></div>
+          <div class="ar"></div>
+          <div class="nd hi"><span class="ic brand"><img src="images/kola-logo-128.png" alt=""></span><b>Kola AI qualifies</b><small>Budget, location, timeline</small></div>
+          <div class="ar"></div>
+          <div class="nd"><span class="ic"><img src="images/logos/googlesheets.svg" alt=""></span><b>Visit booked</b><small>CRM updated, team notified</small></div>
         </div>
-        <div class="vz-float f1"><img src="images/logos/whatsapp.svg" alt=""><div><b>Replied instantly</b><small>Even at 2 AM</small></div></div>
-        <div class="vz-float f2"><img src="images/logos/gmail.svg" alt=""><div><b>Quote PDF sent</b><small>Branded, with GST</small></div></div>
       </div>
+      <div class="h2-works"><span>Works with</span><img src="images/logos/whatsapp.svg" alt=""><img src="images/logos/googlesheets.svg" alt=""><img src="images/logos/gmail.svg" alt=""><img src="images/logos/zoho.svg" alt=""><img src="images/logos/hubspot.svg" alt=""><img src="images/logos/razorpay.svg" alt=""><img src="images/logos/openai.svg" alt=""><img src="images/logos/shopify.svg" alt=""></div>
     </div>
   </div>
 </header>
@@ -988,14 +1022,6 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .15 });
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-// Hero parallax: wordmark and core drift apart on scroll
-const wm = document.querySelector('.wordmark'), core = document.querySelector('.core');
-addEventListener('scroll', () => {
-  const y = scrollY; if (y > innerHeight) return;
-  wm.style.transform = 'translateY(' + y * .35 + 'px)';
-  if (core) core.style.transform = 'translateY(' + y * .1 + 'px)';
-}, { passive: true });
-
 // Hours-saved calculator
 const BUILD_COST = 75000; // placeholder one-time price used for payback; replace with real starting price
 const $ = id => document.getElementById(id);
@@ -1020,46 +1046,6 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Scroll progress
 addEventListener('scroll', () => { $('prog').style.transform = 'scaleX(' + scrollY / (document.body.scrollHeight - innerHeight) + ')'; }, { passive: true });
 
-// Neural network particle field in the hero; nodes link up and pull toward the cursor
-(() => {
-  const c = $('net'), x = c.getContext('2d'), hero = c.parentElement;
-  let W, H, pts = [], mouse = { x: -999, y: -999 };
-  const size = () => {
-    const d = devicePixelRatio || 1; W = hero.clientWidth; H = hero.clientHeight;
-    c.width = W * d; c.height = H * d; x.setTransform(d, 0, 0, d, 0, 0);
-    pts = Array.from({ length: Math.min(110, Math.floor(W * H / 12000)) }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .4, vy: (Math.random() - .5) * .4, r: Math.random() * 1.6 + .6 }));
-  };
-  size(); addEventListener('resize', size);
-  hero.addEventListener('mousemove', e => { const r = hero.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
-  hero.addEventListener('mouseleave', () => mouse.x = -999);
-  const pulses = [];
-  (function draw() {
-    x.clearRect(0, 0, W, H);
-    for (const p of pts) {
-      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
-      if (d < 180) { p.vx += dx / d * .02; p.vy += dy / d * .02; }
-      p.vx *= .99; p.vy *= .99; p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
-    }
-    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
-      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 130) {
-        x.strokeStyle = `rgba(47,48,156,${(1 - d / 130) * .22})`; x.lineWidth = .7;
-        x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.stroke();
-        if (!reduce && Math.random() < .0006) pulses.push({ a, b, t: 0 });
-      }
-    }
-    for (let k = pulses.length - 1; k >= 0; k--) {
-      const s = pulses[k]; s.t += .03;
-      if (s.t >= 1) { pulses.splice(k, 1); continue; }
-      x.fillStyle = '#4b4de0'; x.shadowColor = '#2f309c'; x.shadowBlur = 12;
-      x.beginPath(); x.arc(s.a.x + (s.b.x - s.a.x) * s.t, s.a.y + (s.b.y - s.a.y) * s.t, 2, 0, 7); x.fill(); x.shadowBlur = 0;
-    }
-    for (const p of pts) { x.fillStyle = 'rgba(47,48,156,.45)'; x.beginPath(); x.arc(p.x, p.y, p.r, 0, 7); x.fill(); }
-    if (!reduce) requestAnimationFrame(draw);
-  })();
-})();
-
 // Terminal typing loop
 (() => {
   const cmds = ['deploy lead_bot --channel whatsapp', 'generate quote --enquiry #1042 --gst', 'run attendance --geofence kandivali', 'analyze workflow --find "manual hours"', 'estimate savings --team 5 → ₹1.75L/yr'];
@@ -1072,9 +1058,6 @@ addEventListener('scroll', () => { $('prog').style.transform = 'scaleX(' + scrol
     setTimeout(tick, del ? 18 : 45 + Math.random() * 40);
   })();
 })();
-
-// Periodic glitch on the wordmark
-setInterval(() => { if (reduce) return; wm.classList.remove('glitch'); void wm.offsetWidth; wm.classList.add('glitch'); }, 4200);
 
 // Duplicate ticker for seamless loop
 if ($('tick')) $('tick').innerHTML += $('tick').innerHTML;
