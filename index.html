@@ -398,6 +398,33 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 .core .ring:first-child{background:none;opacity:1;mix-blend-mode:normal}
 .hud.tl,.hud.tr{top:100px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.core{width:60vw;order:-1}.hero-side{order:-1}.hud{display:none}.hero{padding-top:110px}.hero .sub{font-size:16px}.hero-cta .btn{flex:1}}
+
+/* hero v3: clean */
+.hero .glow{opacity:.55;animation:none}
+#net{opacity:.35}
+.wordmark{display:none}
+.trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:14px;color:#cfcfd4}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust li::before{content:"✓";display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:rgba(254,64,6,.18);color:var(--orange);font-size:11px;font-weight:700}
+/* process v2: timeline */
+.ph{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.ph p{max-width:420px;justify-self:end}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:24px;right:24px;top:24px;height:1px;background:linear-gradient(90deg,var(--orange),rgba(254,64,6,.15))}
+.step{position:relative;padding-top:72px}
+.step .sn{position:absolute;top:0;left:0;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:"JetBrains Mono",monospace;font-size:14px;color:#fff;background:#0c0d10;border:1px solid rgba(254,64,6,.6);box-shadow:0 0 0 6px var(--bg),0 0 24px rgba(254,64,6,.35)}
+.step .when{display:inline-block;font-size:12px;color:var(--orange);letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+.step h3{font-size:24px;margin-bottom:10px}
+.step p{font-size:15px;color:var(--muted);margin-bottom:18px}
+.step ul{list-style:none;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:8px;font-size:14px;color:#cfcfd4}
+.step ul li::before{content:"→ ";color:var(--orange)}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:48px 22px 24px;transition:border-color .3s,transform .3s}
+.step .sn{top:-1px;left:22px;transform:translateY(-50%)}
+.steps{margin-top:24px}
+.steps::before{top:0}
+.step:hover{border-color:rgba(254,64,6,.5);transform:translateY(-4px)}
+.pcta{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-top:48px}
+@media(max-width:900px){.ph{grid-template-columns:1fr;gap:16px}.ph p{justify-self:start}.steps{grid-template-columns:1fr;gap:34px}.steps::before{display:none}}
 </style>
 </head>
 <body>
@@ -420,9 +447,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 
 <!-- HERO -->
 <header class="hero">
-  <div class="glow"></div><div class="floor"></div><canvas id="net"></canvas><div class="grain"></div><div class="scan"></div>
-  <div class="hud tl"><span class="live">SYSTEM ONLINE</span><br>MODEL <b>kola-agent-v2</b><br>LATENCY <b id="lat">42ms</b></div>
-  <div class="hud tr">AUTOMATIONS RUNNING <b id="runs">1,284</b><br>HOURS SAVED TODAY <b id="hsv">312</b><br>NODE <b>MUMBAI-01</b></div>
+  <div class="glow"></div><canvas id="net"></canvas>
   <div class="wordmark" data-split="up">kola.ai</div>
   <div class="fade"></div>
   <div class="wrap hero-grid">
@@ -431,7 +456,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
       <h1 data-split="chin">Cut Manual Work in 30 Days</h1>
       <p class="sub">WhatsApp bots, lead follow-ups, quotations and attendance systems — built for your business at a one-time price.</p>
       <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15-min call" href="#">Book 15-min Call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
-      <div class="term"><span class="p">kola@ai:~$</span> <span id="tt"></span><span class="caret"></span></div>
+      <ul class="trust"><li>One-time price</li><li>Live in 30 days</li><li>30 days of support</li></ul>
     </div>
     <div class="hero-side">
       <div class="core" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="ball"></div><div class="visor"><i></i><i></i></div></div>
@@ -442,9 +467,6 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
     </div>
   </div>
 </header>
-<div class="ticker"><div class="t" id="tick">
-  <span>lead_bot.whatsapp <b>replied in 0.8s</b></span><span>quote_engine <b>PDF #Q-1042 sent</b></span><span>attendance.geo <b>18/20 checked in</b></span><span>crm.router <b>lead → Rahul (Sales)</b></span><span>gpt_agent <b>answered 214 queries today</b></span><span>payments.remind <b>₹3.4L recovered</b></span><span>report.daily <b>sent 9:00 AM</b></span>
-</div></div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -462,19 +484,18 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 
 <!-- PROCESS -->
 <section id="process">
-  <div class="wrap process">
-    <div class="left">
-      <span class="label rv">Process</span>
-      <h2 class="rv">Simple Steps to Smart Automation</h2>
-      <p class="muted rv">We map the job first and pick the tool second. Fixed scope, fixed price, fixed date.</p>
-      <a class="btn btn-dark rv" data-wa="starting a project" href="#">Start Project ↗</a>
+  <div class="wrap">
+    <div class="ph">
+      <div><span class="label rv">Process</span><h2 class="rv">From First Call to Live in 30 Days</h2></div>
+      <p class="muted rv">We map the job first and pick the tool second. Fixed scope, fixed price, fixed date — no surprises.</p>
     </div>
-    <div class="grid4 rv">
-      <div class="cell"><span class="label">01 Step</span><div><h3>Map the Task</h3><p>A 15-minute call to find the task eating the most hours.</p></div></div>
-      <div class="cell"><span class="label">02 Step</span><div><h3>Fix the Price</h3><p>Fixed scope, one-time price and a go-live date — in writing.</p></div></div>
-      <div class="cell"><span class="label">03 Step</span><div><h3>Build &amp; Test</h3><p>Built on WhatsApp, Sheets and your CRM — tools your team already uses.</p></div></div>
-      <div class="cell"><span class="label">04 Step</span><div><h3>Hand Over</h3><p>Training, a short video guide and 30 days of support. You own it.</p></div></div>
-    </div>
+    <ol class="steps">
+      <li class="step rv"><div class="sn">01</div><span class="when">Day 1</span><h3>Map the Task</h3><p>A 15-minute call to find the task eating the most hours in your week.</p><ul><li>Free workflow review</li><li>Hours-saved estimate</li></ul></li>
+      <li class="step rv d1"><div class="sn">02</div><span class="when">Day 2–3</span><h3>Fix the Price</h3><p>Fixed scope, one-time price and a go-live date — agreed in writing.</p><ul><li>Written proposal</li><li>No hourly billing</li></ul></li>
+      <li class="step rv d2"><div class="sn">03</div><span class="when">Week 1–3</span><h3>Build &amp; Test</h3><p>Built on WhatsApp, Sheets and your CRM — tools your team already uses.</p><ul><li>Weekly demo</li><li>Tested on real data</li></ul></li>
+      <li class="step rv d3"><div class="sn">04</div><span class="when">Day 30</span><h3>Hand Over</h3><p>Training, a short video guide and 30 days of support. You own it.</p><ul><li>Team training</li><li>30-day support</li></ul></li>
+    </ol>
+    <div class="pcta rv"><span class="muted">Not sure which task to automate first?</span><a class="btn btn-fire" data-wa="starting a project" href="#">Start with a free 15-min call ↗</a></div>
   </div>
 </section>
 
@@ -799,7 +820,7 @@ document.querySelectorAll('a,button,summary,input').forEach(el => {
 // Terminal typing loop
 (() => {
   const cmds = ['deploy lead_bot --channel whatsapp', 'generate quote --enquiry #1042 --gst', 'run attendance --geofence kandivali', 'analyze workflow --find "manual hours"', 'estimate savings --team 5 → ₹1.75L/yr'];
-  let ci = 0, ch = 0, del = false; const el = $('tt');
+  let ci = 0, ch = 0, del = false; const el = $('tt'); if (!el) return;
   (function tick() {
     const s = cmds[ci];
     el.textContent = s.slice(0, ch);
@@ -809,18 +830,11 @@ document.querySelectorAll('a,button,summary,input').forEach(el => {
   })();
 })();
 
-// Live HUD numbers
-setInterval(() => {
-  $('lat').textContent = (30 + Math.random() * 30 | 0) + 'ms';
-  $('runs').textContent = (1284 + (Date.now() / 900 | 0) % 500).toLocaleString('en-IN');
-  $('hsv').textContent = (312 + (Date.now() / 4000 | 0) % 200);
-}, 900);
-
 // Periodic glitch on the wordmark
 setInterval(() => { if (reduce) return; wm.classList.remove('glitch'); void wm.offsetWidth; wm.classList.add('glitch'); }, 4200);
 
 // Duplicate ticker for seamless loop
-$('tick').innerHTML += $('tick').innerHTML;
+if ($('tick')) $('tick').innerHTML += $('tick').innerHTML;
 
 // Decode / scramble effect on section headings when they reveal
 const glyphs = '!<>-_\\/[]{}—=+*^?#01ABCDEF';
