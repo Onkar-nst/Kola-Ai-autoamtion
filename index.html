@@ -549,8 +549,8 @@ details{background:#fff;box-shadow:var(--shadow)}
 .logo img{width:36px;height:36px;border-radius:9px;box-shadow:0 4px 14px rgba(47,48,156,.3)}
 @media(max-width:900px){.logo img{width:30px;height:30px}}
 /* genie headings */
-.genie{transform-origin:50% 100%;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .8s,filter .8s,clip-path 1s cubic-bezier(.2,.8,.2,1);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
-.genie:not(.on){opacity:0;filter:blur(10px);transform:perspective(700px) translateY(60px) scale(.25,.5) rotateX(35deg);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+.genie{transform-origin:50% 100%;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .6s ease,clip-path .8s cubic-bezier(.2,.8,.2,1);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.genie:not(.on){opacity:0;transform:translateY(30px) scale(.4,.15);clip-path:polygon(35% 0,65% 0,100% 100%,0 100%)}
 /* use case visuals: logo style images */
 .svc .vis,.svc:nth-of-type(n) .vis,.svc.flip .vis,.svc.flip:nth-of-type(n) .vis{background:#05051a center/cover no-repeat}
 .svc:nth-of-type(1) .vis{background-image:url(images/svc-1.jpg)}.svc:nth-of-type(2) .vis{background-image:url(images/svc-2.jpg)}.svc:nth-of-type(3) .vis{background-image:url(images/svc-3.jpg)}.svc:nth-of-type(4) .vis{background-image:url(images/svc-4.jpg)}
@@ -637,6 +637,8 @@ h1,h2{font-weight:600;letter-spacing:-.04em}
 @media(max-width:900px){.hero-side{order:0}.mock{width:100%}}
 .vis .panel .bub.l{color:#0b0b1f}
 .hero{min-height:auto;padding:150px 0 90px}
+.genie{text-shadow:none!important}
+.hero h1 .ch{animation:none;opacity:1;filter:none;transform:none}
 </style>
 </head>
 <body>
@@ -664,7 +666,7 @@ h1,h2{font-weight:600;letter-spacing:-.04em}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow"><i></i>AI automation studio · Mumbai</span>
-      <h1 data-split="chin">Cut Manual Work in 30 Days</h1>
+      <h1>Cut Manual Work in 30 Days</h1>
       <p class="sub">WhatsApp bots, lead follow ups, quotations and attendance systems, built for your business at a one time price.</p>
       <div class="hero-cta"><a class="btn btn-fire" data-wa="a 15 min call" href="#">Book 15 min Call ↗</a><a class="btn btn-dark" href="#use-cases">See use cases</a></div>
       <ul class="trust"><li>One time price</li><li>Live in 30 days</li><li>30 days of support</li></ul>
@@ -1048,7 +1050,7 @@ if ($('tick')) $('tick').innerHTML += $('tick').innerHTML;
 
 // Genie effect: headings pour in from a narrow point and vanish again when they leave view
 if (!reduce) {
-  const gh = document.querySelectorAll('section h2, .svc h3, footer h2');
+  const gh = document.querySelectorAll('h1, h2, h3:not(.mock h3)');
   gh.forEach(h => { h.classList.remove('rv'); h.classList.add('genie'); });
   const go = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('on', e.isIntersecting)), { threshold: .35 });
   gh.forEach(h => go.observe(h));
