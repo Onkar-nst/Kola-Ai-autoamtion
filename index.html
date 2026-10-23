@@ -25,7 +25,7 @@ body{background:var(--bg);color:var(--text);font-family:"Geist",system-ui,sans-s
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 80px}
 @media(max-width:900px){.wrap{padding:0 16px}}
-section{padding:130px 0;position:relative}
+section{padding:88px 0;position:relative}
 h1,h2,h3{font-weight:500;letter-spacing:-.035em;line-height:1.08}
 h2{font-size:clamp(34px,4.4vw,56px)}
 .muted{color:var(--muted)}
@@ -293,7 +293,7 @@ footer{position:relative;overflow:hidden;padding:220px 0 40px}
 
 .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.35);transition:transform .25s}
 .wa:hover{transform:scale(1.08)}
-@media(max-width:600px){section{padding:90px 0}}
+@media(max-width:600px){section{padding:60px 0}}
 /* ===== FUTURISTIC LAYER ===== */
 .mono,.label,.chips span,.plan .tl,.result .bar,.grid4 .label{font-family:"JetBrains Mono",monospace}
 .label{font-size:12px;letter-spacing:.08em}
@@ -425,6 +425,15 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 .step:hover{border-color:rgba(254,64,6,.5);transform:translateY(-4px)}
 .pcta{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-top:48px}
 @media(max-width:900px){.ph{grid-template-columns:1fr;gap:16px}.ph p{justify-self:start}.steps{grid-template-columns:1fr;gap:34px}.steps::before{display:none}}
+
+/* clients strip: compact */
+.logos-cap{margin-top:56px;text-align:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.logos{margin-top:22px;gap:12px}
+.logos::before{opacity:.5}
+.logo-tile{height:96px;font-size:19px;color:#8d8e95;border:1px solid var(--line);background:rgba(255,255,255,.02);transition:color .3s,border-color .3s,background .3s}
+.logo-tile:hover{color:#fff;border-color:rgba(254,64,6,.45);background:rgba(254,64,6,.06)}
+.logo-tile .hudc{display:none}
+@media(max-width:900px){.logo-tile{height:76px;font-size:16px}}
 </style>
 </head>
 <body>
@@ -475,6 +484,7 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
       <div><span class="label rv">About</span></div>
       <p class="words">Kola AI is the automation studio of Kola Communications. We build WhatsApp bots, lead follow-ups, quotations and attendance systems that remove the repetitive work your team does every day — at a one-time price, not IT-company pricing.</p>
     </div>
+    <p class="logos-cap rv">Trusted by growing teams across Mumbai</p>
     <div class="logos">
       <div class="logo-tile rv">TFF</div><div class="logo-tile rv d1">Teqball Mumbai</div><div class="logo-tile rv d2">Alica</div><div class="logo-tile rv d3">Airkom</div>
       <div class="logo-tile rv">GSN</div><div class="logo-tile rv d1">Barronia</div><div class="logo-tile rv d2">Post Seven</div><div class="logo-tile rv d3">Divo</div>
