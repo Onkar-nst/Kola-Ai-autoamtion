@@ -433,7 +433,9 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
 .logo-tile{height:96px;font-size:19px;color:#8d8e95;border:1px solid var(--line);background:rgba(255,255,255,.02);transition:color .3s,border-color .3s,background .3s}
 .logo-tile:hover{color:#fff;border-color:rgba(254,64,6,.45);background:rgba(254,64,6,.06)}
 .logo-tile .hudc{display:none}
-@media(max-width:900px){.logo-tile{height:76px;font-size:16px}}
+.logo-tile img{max-width:62%;max-height:46px;object-fit:contain;filter:grayscale(1) brightness(1.6);opacity:.7;transition:filter .3s,opacity .3s}
+.logo-tile:hover img{filter:none;opacity:1}
+@media(max-width:900px){.logo-tile{height:76px;font-size:16px}.logo-tile img{max-height:34px}}
 </style>
 </head>
 <body>
@@ -486,8 +488,8 @@ body.booting .hero .ch,body.booting .talk{animation-play-state:paused}
     </div>
     <p class="logos-cap rv">Trusted by growing teams across Mumbai</p>
     <div class="logos">
-      <div class="logo-tile rv">TFF</div><div class="logo-tile rv d1">Teqball Mumbai</div><div class="logo-tile rv d2">Alica</div><div class="logo-tile rv d3">Airkom</div>
-      <div class="logo-tile rv">GSN</div><div class="logo-tile rv d1">Barronia</div><div class="logo-tile rv d2">Post Seven</div><div class="logo-tile rv d3">Divo</div>
+      <div class="logo-tile rv"><img src="images/clients/tff.png" alt="TFF" loading="lazy" onerror="this.replaceWith(this.alt)"></div><div class="logo-tile rv d1"><img src="images/clients/teqball-mumbai.png" alt="Teqball Mumbai" loading="lazy" onerror="this.replaceWith(this.alt)"></div><div class="logo-tile rv d2"><img src="images/clients/alica.png" alt="Alica" loading="lazy" onerror="this.replaceWith(this.alt)"></div><div class="logo-tile rv d3"><img src="images/clients/airkom.png" alt="Airkom" loading="lazy" onerror="this.replaceWith(this.alt)"></div>
+      <div class="logo-tile rv"><img src="images/clients/gsn.png" alt="GSN" loading="lazy" onerror="this.replaceWith(this.alt)"></div><div class="logo-tile rv d1"><img src="images/clients/barronia.png" alt="Barronia" loading="lazy" onerror="this.replaceWith(this.alt)"></div><div class="logo-tile rv d2"><img src="images/clients/post-seven.png" alt="Post Seven" loading="lazy" onerror="this.replaceWith(this.alt)"></div><div class="logo-tile rv d3"><img src="images/clients/divo.png" alt="Divo" loading="lazy" onerror="this.replaceWith(this.alt)"></div>
     </div>
   </div>
 </section>
